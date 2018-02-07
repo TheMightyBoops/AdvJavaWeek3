@@ -1,5 +1,6 @@
 package us.mattgreen;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -79,5 +80,17 @@ public class Main {
         System.out.print("Please Enter Value: ");
         String ans = keyboard.nextLine();
         mealsArray.printByNameSearch(ans);
+    }
+
+    public static ArrayList arrayConverter(Meals[] mealArray) {
+        ArrayList<Meals> convertedArray = new ArrayList<>();
+        // loop through the array and assign to the new arraylist
+        int i = 0;
+        while(mealArray[i] != null && i < mealArray.length) {
+            convertedArray.add(mealArray[i]);
+            ++i;
+        }
+
+        return convertedArray;
     }
 }
